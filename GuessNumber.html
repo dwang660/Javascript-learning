@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Guess the number</title>
+        <script type = "text/javascript"></script>
+    </head>
+    <body>
+        <p>Input the number you guess</p>
+        <p><input type="number" id="num" min="0" max="10"  /></p>
+        <button onclick="checknumber()" >Submit</button>
+    </body>
+</html>
+
+<script>
+    const number = Math.floor(Math.random()*11);
+    function checknumber()
+    {
+        
+        var element = document.getElementById('num');
+        //var textNode = element.childNodes[0];
+        //var text = textNode.data;
+        var text = Number(element.value)
+        if (number == text)
+        {
+            alert("Correct!");
+        }
+        else{
+            alert("Try again!")
+        }
+        alert(number);
+    }
+</script>
